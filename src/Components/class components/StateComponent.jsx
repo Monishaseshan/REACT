@@ -1,0 +1,27 @@
+import React from "react";
+class StateComponent extends React.Component {
+    constructor(){
+        super()
+        this.state = {
+            name:"KEC",
+            course:"MERN"
+        }
+    }
+    changeState = () =>{
+      console.log("KONGU ENGINEERING COLLEGE")  //use state should be used when we come to hooks.
+    }
+    render(){
+        return(
+            <div>
+                <h1>This is state component</h1>
+                <h2><p>Hello, <b>{this.state.name}</b><br></br>This is {this.state.course} class</p></h2>
+                <h3>I am changing the state of the {this.state.name} to {this.changeState()}</h3>
+                <button onMouseOver={this.changeState}>Click me to change the state</button>
+                
+
+            </div>
+        )
+    }
+}
+
+export default StateComponent;
